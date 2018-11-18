@@ -1,0 +1,91 @@
+#lp-description {
+font-size:20px; width: 350px; margin-left: 5px;
+}
+.lp-tabs-menu-item{max-width:24.4%;width:100%;}
+.file-link1 {
+font-family: 'Exo 2',sans-serif;
+font-weight: 400;
+font-size: 14px;
+color: #00bbff;
+}
+ .file-link1:hover {
+	color: white;
+    text-decoration: none;
+	background-color: #fd4f16;
+ }
+
+.s-rack, .s-converged, .s-tower, .s-blade {width: 100%; padding: 10px;background-color:#fafafa; }
+p.author {font-size:13px;text-align:right;font-style:italic; margin-top:0px; margin-bottom:0px;}
+p.message {font-size: 22px; margin-left:0px;margin-top: -27px;font-style:italic; margin-left: 20px; margin-bottom: 0px;}
+p.opening-quote {font-size: 22px; margin-left:5px;margin-top: 0px; margin-bottom: 0px; font-style:italic;}
+img.stars {margin-top:0px; margin-bottom: 0px; width:100px;}
+ 
+ @media(max-width: 960px){
+    
+	#lp-img-container {
+	margin-top:0px;
+		}
+	#lp-description {
+		width:100%;
+		padding: 10px 10px;
+		font-size: 17px !important;
+	}
+	p.author {font-size:10px;}
+	p.message {font-size: 18px; margin-top: -20px; margin-left:15px;}
+	p.opening-quote {font-size: 18px;}
+}
+
+@media (max-width: 768px)
+{
+
+.s-rack, .s-converged, .s-tower, .s-blade{
+width: 100%; height: auto; margin: 0; padding-top: 20px;
+}
+.s-comment{height:auto !important; display: none;padding: 10px;background-color:transparent;}
+}
+.row {
+    display: table ;
+
+	-webkit-border-horizontal-spacing: 10px;
+    
+}
+.col {
+    display: table-cell ;
+    width:32%;
+	background-color: #fafafa;
+   
+}
+.col-comment {
+	background-color:transparent !important; vertical-align:middle;
+}
+@media only screen and (max-width: 768px) {
+    .col { 
+        display: block !important;
+        width: 100%;
+		
+    }
+	
+}
+
+
+h2.section-main-title {
+font-size: 25px;color:#606b6f; margin-left: 15px;margin-top:-10px;	
+}
+.main-section{
+	margin: 15px 0;
+}
+h2.column-title {
+	text-align:left; font-family:Arial,sans-serif;font-size:22px;font-weight:bold;color:#fd6534; margin-bottom:10px; 
+}
+h2.column-description {
+	text-align:left;font-size: 14px; font-weight: normal;
+}
+img.column-img{
+	margin-top:10px; margin-bottom: 10px; width:100%;
+}
+h2.column-options-title{
+	text-align:left;font-size: 14px; margin-bottom: 5px; font-weight: normal; 
+}
+.column-options {
+	padding-left:10px;
+}
