@@ -17,8 +17,8 @@ class CreatePagesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->longText('descreption');
-            $table->integer('brand_id')->nullable()->unsigned();
-            $table->foreign('brand_id')->references('id')->on("brands")->onDelete('set null');
+            $table->integer('category_id')->nullable()->unsigned();
+            $table->foreign('category_id')->references('id')->on("categories")->onDelete('set null');
             $table->string('slug');
             $table->string('image')->nullable();  
             $table->timestamps();

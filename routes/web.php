@@ -40,5 +40,6 @@ Route::get('/', 'ItemController@root');
 Route::get('servers/{id}', 'ItemController@servers');
 Route::get('workstations/{id}', 'ItemController@workstations');
 Route::get('storages/{id}', 'ItemController@storages');
+Route::get('pages/{id}', 'ItemController@page');
 Route::get('servers/server/{id}', 'ItemController@server');
 Route::get('workstations/workstation/{id}', 'ItemController@workstation');

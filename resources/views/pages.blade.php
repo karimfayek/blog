@@ -47,24 +47,22 @@
           <div class="modal-body">
             <div class="form-group">
                 <label for="Cat">Cat</label>
-                <select name ="categories_id" class="form-control">
+                <select name ="category_id" class="form-control">
                     <option value=""></option>
                     @foreach ($categories as $cat)                    
                         <option value="{{$cat->id}}"> {{$cat->title}} </option>
                     @endforeach
                 </select>
-                <label for="Brand">Brand</label>
-                <select name ="brand_id" class="form-control">
-                  <option value=""></option>
-                  @foreach ($brands as $brand)                    
-                      <option value="{{$brand->id}}"> {{$brand->title}} </option>
-                  @endforeach
-              </select>
+
             </div>
         
             <div class="form-group">
               <label for="title">Title</label>
               <input type="text" name="title" class="form-control" id="title">
+            </div>
+            <div class="form-group">
+              <label for="slug">Slug</label>
+              <input type="text" name="slug" class="form-control" id="slug">
             </div>
 
             <div class="form-group">

@@ -97,8 +97,9 @@
 		<div class="col-xs-4 adv-icon-wrp padding-0 wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.5s">
 			<div class="adv-icon-displaced">
 				<a target="_blank" href="https://www.resellerratings.com/store/#" class="advantage-icon-item star-rating" rel="noopener">
-					
+					<svg version="1.1" id="layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="96px" height="96px" viewBox="0 0 96 96" enable-background="new 0 0 96 96" xml:space="preserve"><path fill="#FFFFFF" d="M63.907,72.11c0.229,1.542-0.7,2.185-2.063,1.429l-12.148-6.745c-1.363-0.757-3.621-0.808-5.017-0.114 l-12.443,6.186c-1.396,0.693-2.294,0.01-1.996-1.521l2.66-13.639c0.298-1.53-0.351-3.693-1.442-4.807l-9.727-9.923 c-1.091-1.114-0.718-2.179,0.83-2.368l13.793-1.685c1.548-0.189,3.404-1.475,4.126-2.856l6.432-12.318 c0.722-1.382,1.851-1.356,2.508,0.057l5.864,12.598c0.658,1.414,2.455,2.782,3.992,3.041l13.702,2.311 c1.538,0.259,1.862,1.34,0.722,2.403l-10.17,9.471c-1.141,1.063-1.887,3.193-1.658,4.736L63.907,72.11z"/></svg>
 				</a>
+
 				<div class="title-icons">5-star rating</div>
 			</div>
 		</div>
@@ -271,16 +272,14 @@
 			</div>
 		</div>
 	</div>
-	<div
-		class="storages-wrp clearfix">
-		<div
-			class="storages-wrp-content"
-			data-server-title="Storage">
+	<div class="storages-wrp clearfix">
+		<div class="storages-wrp-content" data-server-title="Storage">
+			@foreach ($brands as $brand)
 			<div class="left-storage-content-wrp col-xs-6 padding-0">
 				<a
-					href="https://www.itcreations.com/dell/Dell-Storage.asp"
+					href="{{url('/storage/')}}/{{($brand->id) }}"
 					class="left-storage-content wow zoomIn"
-					data-server-title="Dell PowerVault">
+					data-server-title="{{($brand->title) }} Storage">
 					<img
 						class="storage-img b-lazy"
 						data-src="images/dell-powervault-storage-solutions.png"
@@ -288,42 +287,8 @@
 						title="Dell PowerVault Storage Line">
 				</a>
 			</div>
-			<div class="right-storage-content-wrp col-xs-6 padding-0">
-				<a
-					href="https://www.itcreations.com/hp/HPE-Storage.asp"
-					class="right-storage-content wow zoomIn"
-					data-server-title="HPE Storage">
-					<img
-						class="storage-img b-lazy"
-						data-src="images/hpe-storeonce-data-storage-products.png"
-						alt="image of hpe storage and storevirtual with link to hpe data storage products page"
-						title="HPE Storage Line">
-				</a>
-            </div>
-            <div class="left-storage-content-wrp col-xs-6 padding-0">
-				<a
-					href="https://www.itcreations.com/dell/Dell-Storage.asp"
-					class="left-storage-content wow zoomIn"
-					data-server-title="Dell PowerVault">
-					<img
-						class="storage-img b-lazy"
-						data-src="images/dell-powervault-storage-solutions.png"
-						alt=" image of dell powervault chassis with link to dell powervault data storage products"
-						title="Dell PowerVault Storage Line">
-				</a>
-			</div>
-			<div class="right-storage-content-wrp col-xs-6 padding-0">
-				<a
-					href="https://www.itcreations.com/hp/HPE-Storage.asp"
-					class="right-storage-content wow zoomIn"
-					data-server-title="HPE Storage">
-					<img
-						class="storage-img b-lazy"
-						data-src="images/hpe-storeonce-data-storage-products.png"
-						alt="image of hpe storage and storevirtual with link to hpe data storage products page"
-						title="HPE Storage Line">
-				</a>
-			</div>
+			@endforeach
+
 		</div>
 	</div>
 </section>

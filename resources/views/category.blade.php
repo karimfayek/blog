@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<h3> All Types</h3>
+<h3> All categories</h3>
 
 <table class="table table-responsive">
   <thead>
@@ -29,7 +29,7 @@
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#catModal">
-  Add New Type
+  Add New Category
 </button>
 
 <!-- Modal -->
@@ -51,6 +51,10 @@
       		<input type="text" name="title" class="form-control" id="title">
       	</div>
 
+          <div class="form-group">
+              <label for="slug">Slug</label>
+              <input type="text" name="slug" class="form-control" id="title">
+          </div>
       	<div class="form-group">
       		<label for="des">Content</label>
       		<textarea  type="text" name="descreption" id="des" cols="90" rows="5"></textarea>

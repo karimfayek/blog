@@ -7,6 +7,8 @@ use \App\Item;
 use \App\Subtype;
 use \App\Brand;
 use \App\Type;
+use \App\Category;
+use \App\Page;
 
 class ItemController extends Controller
 {
@@ -105,8 +107,9 @@ class ItemController extends Controller
         $types = Type::where('brand_id', $brands->id)->where('Server', 1)->get();
         $typew = Type::where('brand_id', $brands->id)->where('Work-Station', 1)->get();
         $typest = Type::where('brand_id', $brands->id)->where('Storage', 1)->get();
+        $cats = Category::all();
 
-        return view('servers' ,compact('brands', 'allbrands','types','typew', 'typest'));
+        return view('servers' ,compact('brands', 'allbrands','types','typew', 'typest','cats'));
     }
 
     public function workstations(Request $request)
@@ -115,9 +118,10 @@ class ItemController extends Controller
         $brands = Brand::findOrFail($request->id);
         $allbrands = Brand::all();
         $types = Type::where('brand_id', $brands->id)->where('Work-Station', 1)->get();
+        $cats = Category::all();
 
 
-        return view('work-stations' ,compact('brands', 'types', 'allbrands'));
+        return view('work-stations' ,compact('brands', 'types', 'allbrands','cats'));
     }
 
     public function storages(Request $request)
@@ -145,6 +149,18 @@ class ItemController extends Controller
         $items = Item::findOrFail($request->id);
         //dd($items);
         return view('server' ,compact('items'));
+    }
+
+    public function page(Request $request)
+    {
+
+        $page = Page::findOrFail($request->id);
+        $allbrands = Brand::all();
+        //$types = Type::where('brand_id', $brands->id)->where('Work-Station', 1)->get();
+        $cats = Category::all();
+
+
+        return view('page' ,compact('page', 'types', 'allbrands','cats'));
     }
 
 }

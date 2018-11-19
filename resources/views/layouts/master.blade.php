@@ -265,6 +265,8 @@ desired effect
         <li class="active"><a href="{{url('type')}}"><i class="fa fa-link"></i> <span>Types</span></a></li>
         <li class="active"><a href="{{url('subtype')}}"><i class="fa fa-link"></i> <span>SubTypes</span></a></li>
         <li class="active"><a href="{{url('item')}}"><i class="fa fa-link"></i> <span>Items</span></a></li>
+        <li class="active"><a href="{{url('category')}}"><i class="fa fa-link"></i> <span>categories</span></a></li>
+        <li class="active"><a href="{{url('page')}}"><i class="fa fa-link"></i> <span>Pages</span></a></li>
         <li class="active"><a href="{{url('towers')}}"><i class="fa fa-link"></i> <span>Tower Servers</span></a></li>
         <li class="active"><a href="{{url('blades')}}"><i class="fa fa-link"></i> <span>Blade Servers</span></a></li>
         <li class="active"><a href="{{url('work')}}"><i class="fa fa-link"></i> <span>Work Stations</span></a></li>
